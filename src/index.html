@@ -1,68 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- reset css-->
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <!-- styles -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foodzie</title>
+  <link rel="stylesheet" href="./assets/css/reset.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <style>
+    .container {
+      max-width: 1528px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+  </style>
 </head>
 
 <body style="height: 10000px;">
-    <script src="main.js"></script>
-    <!-- header -->
-    <header class="header fixed">
-        <div class="main-content">
-            <!-- top bar -->
-            <div class="top-bar">
-                <div class="welcome">
-                    <!-- welcome -->
-                    <span>✨ Welcome!</span>
-                </div>
-                <!-- location -->
-                <div class="location">
-                    <!-- location logo -->
-                    <img src="./assets/img/location.svg" alt="Location Icon" class="location-icon">
-                    <span> Regent Street, A4, A4201, London</span>
-                    <a href="#!" class="change-location">Change Location</a>
-                </div>
-                <!-- cart -->
-                <div class="cart">
-                        <div class="cart-item"> <img src="./assets/img/full shopping basket.svg" alt="Location Icon" class="location-icon"> </div>
-                        <div class="divider"></div>
-                        <div class="cart-item"> 23 Items </div>
-                        <div class="divider"></div>
-                        <div class = "cash">79.89$</div>
-                        <div class="divider"></div>
-                        <div class="cart-item"> <button class="dropdown-btn">Checkout</button> </div>
-                      </>
-                      
-                </div>
+  <script src="main.js"></script>
+
+  <!-- Header Area (Top bar + Navbar) -->
+  <div class="container">
+    <!-- Top bar -->
+    <div class="main-content">
+        <div class="top-bar">
+            <div class="welcome">
+                <span>✨ Welcome!</span>
             </div>
-            <div class="body">
-                <img src="./assets/img/logo.svg" alt="Foodzie" class="logo">
-                <nav class="nav">
-                    <ul>
-                        <li class="active">
-                            <a href="#!" class="nav-link active">Home</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="nav-link">Browse Menu</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="nav-link">Restaurants</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="nav-link">Track Order</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="nav-link">Support</a>
-                        </li>
-                    </ul>
-                </nav>
-                <a href="#!" class="login-signup">Login/Signup</a>
+            <div class="location">
+                <img src="./assets/img/location.svg" alt="Location Icon" class="location-icon">
+                <span> Regent Street, A4, A4201, London</span>
+                <a href="#!" class="change-location">Change Location</a>
+            </div>
+                <div class="cart">
+                <div class="cart-item"><img src="./assets/img/full shopping basket.svg" alt="Cart"></div>
+                <div class="divider"></div>
+                <div class="cart-item">23 Items</div>
+                <div class="divider"></div>
+                <div class="cash">79.89$</div>
+                <div class="divider"></div>
+                <div class="cart-item"><button class="dropdown-btn">Checkout</button></div>
             </div>
         </div>
+  </div>
+  
+
+    <!-- Header / Navbar -->
+    <header class="header fixed">
+      <div class="main-content">
+        <div class="body">
+          <img src="./assets/img/Logo-no-slogan 1.svg" alt="Foodzie Logo" class="logo" />
+          <nav class="nav">
+            <ul>
+              <li class="active"><a href="#!" class="nav-link active">Home</a></li>
+              <li><a href="#!" class="nav-link">Browse Menu</a></li>
+              <li><a href="#!" class="nav-link">Restaurants</a></li>
+              <li><a href="#!" class="nav-link">Track Order</a></li>
+              <li><a href="#!" class="nav-link">Support</a></li>
+            </ul>
+          </nav>
+          <a href="#!" class="login-signup">Login/Signup</a>
+        </div>
+      </div>
     </header>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <section class="hero-banner">
+      <div class="hero-content">
+        <!-- Left -->
+        <div class="hero-left">
+          <p class="subheading">Order Restaurant food, takeaway and groceries.</p>
+          <h1 class="hero-title">Feast Your Senses,<br /><span>Fast and Fresh</span></h1>
+          <p class="instruction">Enter a postcode to see what we deliver</p>
+          <form class="search-bar">
+            <input type="text" placeholder="e.g. EC4R 3TE" />
+            <button type="submit">Search</button>
+          </form>
+        </div>
+
+        <!-- Right -->
+        <div class="hero-right">
+            <div class="hero-right">
+                <div class="yellow-shape"></div> <!-- shape vàng -->
+                <div class="hero-image-container">
+                  <img src=".\assets\img\hero-girl-eating .svg" class="hero-img" />
+                  <div class="notification notification-1">
+                    <img src="./assets/img/Logo-name-only.svg" alt="brand" class="brand" />
+                    <p class="status">We’ve Received your order!</p>
+                    <p class="note">Awaiting Restaurant acceptance</p>
+                  </div>
+                  <div class="notification notification-2">
+                    <img src="./assets/img/Logo-name-only.svg" alt="brand" class="brand" />
+                    <p class="status">Order Accepted!</p>
+                    <p class="note">Your order will be delivered shortly</p>
+                  </div>
+                  <div class="notification notification-3">
+                    <img src="./assets/img/Logo-name-only.svg" alt="brand" class="brand" />
+                    <p class="status">Your rider's nearby</p>
+                    <p class="note">They're almost there, get ready!</p>
+                </div>
+                  <div class="step step-1">1</div>
+                  <div class="step step-2">2</div>
+                  <div class="step step-3">3</div>
+                </div>
+              </div>
+              
+    </section>
+  </div>
+</body>
+</html>
