@@ -1,112 +1,433 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Foodzie</title>
-  <link rel="stylesheet" href="./assets/css/reset.css" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <style>
-    .container {
-      max-width: 1528px;
-      margin: 0 auto;
-      padding: 0 16px;
-    }
-  </style>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foodzie</title>
 
-<body style="height: 10000px;">
-  <script src="main.js"></script>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
 
-  <!-- Header Area (Top bar + Navbar) -->
-  <div class="container">
-    <!-- Top bar -->
-    <div class="main-content">
-        <div class="top-bar">
-            <div class="welcome">
-                <span>✨ Welcome!</span>
-            </div>
-            <div class="location">
-                <img src="./assets/img/location.svg" alt="Location Icon" class="location-icon">
-                <span> Regent Street, A4, A4201, London</span>
-                <a href="#!" class="change-location">Change Location</a>
-            </div>
-                <div class="cart">
-                <div class="cart-item"><img src="./assets/img/full shopping basket.svg" alt="Cart"></div>
-                <div class="divider"></div>
-                <div class="cart-item">23 Items</div>
-                <div class="divider"></div>
-                <div class="cash">79.89$</div>
-                <div class="divider"></div>
-                <div class="cart-item"><button class="dropdown-btn">Checkout</button></div>
-            </div>
-        </div>
-  </div>
-  
+    <!-- Icon -->
+    <link rel="icon" href="./assets/img/Logo-no-slogan-1.ico" type="image/x-icon" />
 
-    <!-- Header / Navbar -->
-    <header class="header fixed">
+    <!-- Inline Styles -->
+    <style>
+      .main-content,
+      .footer-container,
+      .hero-banner {
+        max-width: 1528px;
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+
+    <!-- Header Area (Top bar + Navbar) -->
+    <div class="container">
+      <!-- Top bar -->
       <div class="main-content">
-        <div class="body">
-          <img src="./assets/img/Logo-no-slogan 1.svg" alt="Foodzie Logo" class="logo" />
-          <nav class="nav">
-            <ul>
-              <li class="active"><a href="#!" class="nav-link active">Home</a></li>
-              <li><a href="#!" class="nav-link">Browse Menu</a></li>
-              <li><a href="#!" class="nav-link">Restaurants</a></li>
-              <li><a href="#!" class="nav-link">Track Order</a></li>
-              <li><a href="#!" class="nav-link">Support</a></li>
-            </ul>
-          </nav>
-          <a href="#!" class="login-signup">Login/Signup</a>
+        <div class="top-bar">
+          <div class="welcome">
+            <span>✨ Welcome!</span>
+          </div>
+          <div class="location">
+            <img src="./assets/img/location.svg" alt="Location Icon" class="location-icon">
+            <span> Regent Street, A4, A4201, London</span>
+            <a href="#!" class="change-location">Change Location</a>
+          </div>
+          <div class="cart">
+            <div class="cart-item"><img src="./assets/img/full shopping basket.svg" alt="Cart"></div>
+            <div class="divider"></div>
+            <div class="cart-item">23 Items</div>
+            <div class="divider"></div>
+            <div class="cash">79.89$</div>
+            <div class="divider"></div>
+            <div class="cart-item"><button class="dropdown-btn">Checkout</button></div>
+          </div>
         </div>
       </div>
-    </header>
-  </div>
 
-  <!-- Main Content -->
-  <div class="main">
-    <section class="hero-banner">
-      <div class="hero-content">
-        <!-- Left -->
-        <div class="hero-left">
-          <p class="subheading">Order Restaurant food, takeaway and groceries.</p>
-          <h1 class="hero-title">Feast Your Senses,<br /><span>Fast and Fresh</span></h1>
-          <p class="instruction">Enter a postcode to see what we deliver</p>
-          <form class="search-bar">
-            <input type="text" placeholder="e.g. EC4R 3TE" />
-            <button type="submit">Search</button>
-          </form>
+      <!-- Header / Navbar -->
+      <header class="header fixed">
+        <div class="main-content">
+          <div class="body">
+            <img src="./assets/img/Logo-no-slogan 1.svg" alt="Foodzie Logo" class="logo" />
+            <nav class="nav">
+              <ul>
+                <li class="active"><a href="#!" class="nav-link active">Home</a></li>
+                <li><a href="#!" class="nav-link">Browse Menu</a></li>
+                <li><a href="#!" class="nav-link">Restaurants</a></li>
+                <li><a href="#!" class="nav-link">Track Order</a></li>
+                <li><a href="#!" class="nav-link">Support</a></li>
+              </ul>
+            </nav>
+            <a href="#!" class="login-signup">Login/Signup</a>
+          </div>
         </div>
+      </header>
+    </div>
 
-        <!-- Right -->
-        <div class="hero-right">
-            <div class="hero-right">
-                <div class="yellow-shape"></div> <!-- shape vàng -->
-                <div class="hero-image-container">
-                  <img src=".\assets\img\hero-girl-eating .svg" class="hero-img" />
-                  <div class="notification notification-1">
-                    <img src="./assets/img/Logo-name-only.svg" alt="brand" class="brand" />
-                    <p class="status">We’ve Received your order!</p>
-                    <p class="note">Awaiting Restaurant acceptance</p>
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Hero Banner -->
+      <section class="hero-banner">
+        <div class="hero-content">
+          <div class="hero-left">
+            <p class="subheading">
+              Order Restaurant food, takeaway and groceries.
+            </p>
+            <h1 class="hero-title">
+              Feast Your Senses,<br /><span>Fast and Fresh</span>
+            </h1>
+            <p class="instruction">Enter a postcode to see what we deliver</p>
+            <form class="search-bar">
+              <input type="text" placeholder="e.g. EC4R 3TE" />
+              <button type="submit">Search</button>
+            </form>
+          </div>
+          <div class="hero-right">
+            <div class="yellow-shape"></div>
+            <div class="hero-image-container">
+              <img src="./assets/img/hero-girl-eating.svg" alt="Hero Image" class="hero-img" />
+              <div class="notification notification-1">
+                <img src="./assets/img/Logo-name-only.svg" alt="brand" class="brand" />
+                <p class="status">We've Received your order!</p>
+                <p class="note">Awaiting Restaurant acceptance</p>
+              </div>
+              <div class="notification notification-2">
+                <img src="./assets/img/Logo-name-only.svg" alt="brand" class="brand" />
+                <p class="status">Order Accepted!</p>
+                <p class="note">Your order will be delivered shortly</p>
+              </div>
+              <div class="notification notification-3">
+                <img src="./assets/img/Logo-name-only.svg" alt="brand" class="brand" />
+                <p class="status">Your rider's nearby</p>
+                <p class="note">They're almost there, get ready!</p>
+              </div>
+              <div class="step step-1">1</div>
+              <div class="step step-2">2</div>
+              <div class="step step-3">3</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Exclusive Deals -->
+      <section class="exclusive-deals">
+        <div class="main-content">
+          <div class="ex-header">
+            <h2>Up to -40% 🥳 Exclusive Deals</h2>
+            <div class="filters">
+              <button>Vegan</button>
+              <button>Sushi</button>
+              <button class="active">Pizza & Fast food</button>
+              <button>Others</button>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="deal-card">
+              <img src="./assets/img/deals/burgers.jpg" alt="Chef Burgers London" />
+              <span class="badge">-40%</span>
+              <div class="info">
+                <p class="type">Restaurant</p>
+                <h3>Chef Burgers London</h3>
+              </div>
+            </div>
+            <div class="deal-card">
+              <img src="./assets/img/deals/salad.jpg" alt="Grand Ai Cafe London" />
+              <span class="badge">-20%</span>
+              <div class="info">
+                <p class="type">Restaurant</p>
+                <h3>Grand Ai Cafe London</h3>
+              </div>
+            </div>
+            <div class="deal-card">
+              <img src="./assets/img/deals/sandwich.jpg" alt="Butterbrot Cafe London" />
+              <span class="badge">-17%</span>
+              <div class="info">
+                <p class="type">Restaurant</p>
+                <h3>Butterbrot Cafe London</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Categories -->
+      <section class="categories">
+        <div class="main-content">
+          <h2 class="categories-title">
+            Popular Categories <span>😋</span>
+          </h2>
+          <div class="categories-grid">
+            <div class="category-card">
+              <img src="./assets/img/burgers.jpg" alt="Burgers & Fast food" />
+              <div class="category-info">
+                <h3>Burgers & Fast food</h3>
+                <p>21 Restaurants</p>
+              </div>
+            </div>
+            <div class="category-card">
+              <img src="./assets/img/salads.jpg" alt="Salads" />
+              <div class="category-info">
+                <h3>Salads</h3>
+                <p>32 Restaurants</p>
+              </div>
+            </div>
+            <div class="category-card">
+              <img src="./assets/img/pasta.jpg" alt="Pasta & Casuals" />
+              <div class="category-info">
+                <h3>Pasta & Casuals</h3>
+                <p>4 Restaurants</p>
+              </div>
+            </div>
+            <div class="category-card">
+              <img src="./assets/img/pizza.jpg" alt="Pizza" />
+              <div class="category-info">
+                <h3>Pizza</h3>
+                <p>32 Restaurants</p>
+              </div>
+            </div>
+            <div class="category-card">
+              <img src="./assets/img/breakfast.jpg" alt="Breakfast" />
+              <div class="category-info">
+                <h3>Breakfast</h3>
+                <p>4 Restaurants</p>
+              </div>
+            </div>
+            <div class="category-card">
+              <img src="./assets/img/soups.jpg" alt="Soups" />
+              <div class="category-info">
+                <h3>Soups</h3>
+                <p>32 Restaurants</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Popular Restaurants -->
+      <section class="popular-restaurants">
+        <div class="main-content">
+          <h2 class="section-title">Popular Restaurants</h2>
+          <div class="restaurants-grid">
+            <div class="restaurant-card">
+              <img src="./assets/img/restaurants/mcdonalds.jpg" alt="McDonald's London" />
+              <p>McDonald's London</p>
+            </div>
+            <div class="restaurant-card">
+              <img src="./assets/img/restaurants/papajohns.jpg" alt="Papa Johns" />
+              <p>Papa Johns</p>
+            </div>
+            <div class="restaurant-card">
+              <img src="./assets/img/restaurants/kfc.jpg" alt="KFC West London" />
+              <p>KFC West London</p>
+            </div>
+            <div class="restaurant-card">
+              <img src="./assets/img/restaurants/texas-chicken.jpg" alt="Texas Chicken" />
+              <p>Texas Chicken</p>
+            </div>
+            <div class="restaurant-card">
+              <img src="./assets/img/restaurants/burger-king.jpg" alt="Burger King" />
+              <p>Burger King</p>
+            </div>
+            <div class="restaurant-card">
+              <img src="./assets/img/restaurants/shaurma.jpg" alt="Shaurma 1" />
+              <p>Shaurma 1</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Us -->
+      <section class="about-us">
+        <div class="main-content">
+          <h2 class="section-title">Know more about us!</h2>
+          <div class="tabs">
+            <button class="tab active">Frequent Questions</button>
+            <button class="tab">Who we are?</button>
+            <button class="tab">Partner Program</button>
+            <button class="tab">Help & Support</button>
+          </div>
+          <div class="content">
+            <div class="faq">
+              <div class="faq-questions">
+                <button class="faq-question active">How does Foodzie work?</button>
+                <button class="faq-question">What payment methods are accepted?</button>
+                <button class="faq-question">Can I track my order in real-time?</button>
+                <button class="faq-question">Are there any special discounts or promotions available?</button>
+              </div>
+              <div class="faq-answers">
+                <div class="faq-answer">
+                  <div class="faq-card">
+                    <img src="./assets/img/icons/order.svg" alt="Place an Order" />
+                    <h3>Place an Order!</h3>
+                    <p>Place order through our website or Mobile app</p>
                   </div>
-                  <div class="notification notification-2">
-                    <img src="./assets/img/Logo-name-only.svg" alt="brand" class="brand" />
-                    <p class="status">Order Accepted!</p>
-                    <p class="note">Your order will be delivered shortly</p>
+                  <div class="faq-card">
+                    <img src="./assets/img/icons/progress.svg" alt="Track Progress" />
+                    <h3>Track Progress</h3>
+                    <p>Your can track your order status with delivery time</p>
                   </div>
-                  <div class="notification notification-3">
-                    <img src="./assets/img/Logo-name-only.svg" alt="brand" class="brand" />
-                    <p class="status">Your rider's nearby</p>
-                    <p class="note">They're almost there, get ready!</p>
-                </div>
-                  <div class="step step-1">1</div>
-                  <div class="step step-2">2</div>
-                  <div class="step step-3">3</div>
+                  <div class="faq-card">
+                    <img src="./assets/img/icons/delivery.svg" alt="Get your Order" />
+                    <h3>Get your Order!</h3>
+                    <p>Receive your order at a lightning fast speed!</p>
+                  </div>
                 </div>
               </div>
-              
-    </section>
-  </div>
-</body>
+            </div>
+            <p class="about-description">
+              FOODZIE simplifies the food ordering process. Browse through our diverse menu, select your favorite dishes, and proceed to checkout. Your delicious meal will be on its way to your doorstep in no time!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Statistics -->
+      <section class="statistics">
+        <div class="main-content">
+          <div class="stats-container">
+            <div class="stat-item">
+              <h3>546+</h3>
+              <p>Registered Riders</p>
+            </div>
+            <div class="divider"></div>
+            <div class="stat-item">
+              <h3>789,900+</h3>
+              <p>Orders Delivered</p>
+            </div>
+            <div class="divider"></div>
+            <div class="stat-item">
+              <h3>690+</h3>
+              <p>Restaurants Partnered</p>
+            </div>
+            <div class="divider"></div>
+            <div class="stat-item">
+              <h3>17,457+</h3>
+              <p>Food Items</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Footer Top: Logo & Subscribe -->
+        <div class="footer-top">
+          <div class="footer-logo">
+            <img src="./assets/img/logo.svg" alt="Foodzie Logo" />
+            <p>Company # 490039-445, Registered with House of companies.</p>
+          </div>
+          <div class="footer-subscribe">
+            <h3>Get exclusive deals in your inbox</h3>
+            <form class="subscribe-form">
+              <input type="email" placeholder="youremail@gmail.com" />
+              <button type="submit">Subscribe</button>
+            </form>
+            <p class="subscribe-note">We won't spam, read our email policy.</p>
+            <div class="footer-social">
+              <a href="#" aria-label="Facebook"><img src="./assets/img/Facebook.svg" alt="Facebook Logo" /></a>
+              <a href="#" aria-label="Instagram"><img src="./assets/img/Instagram.svg" alt="Instagram Logo" /></a>
+              <a href="#" aria-label="TikTok"><img src="./assets/img/TikTok.svg" alt="TikTok Logo" /></a>
+              <a href="#" aria-label="Snapchat"><img src="./assets/img/Snapchat.svg" alt="Snapchat Logo" /></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Middle: Legal & Important Links -->
+        <div class="footer-middle">
+          <div class="footer-legal">
+            <a href="#">Terms &amp; Conditions</a>
+            <a href="#">Privacy</a>
+            <a href="#">Cookies</a>
+            <a href="#">Modern Slavery Statement</a>
+          </div>
+          <div class="footer-important">
+            <a href="#">Get help</a>
+            <a href="#">Add your restaurant</a>
+            <a href="#">Sign up to deliver</a>
+            <a href="#">Create a business account</a>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <p>&copy; Foodzie.com 2024, All Rights Reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="#">Do not sell or share my personal information</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal-overlay" id="loginModal">
+      <div class="login-modal">
+        <button class="close-modal" id="closeModal">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.3 5.71a.996.996 0 00-1.41 0L12 10.59 7.11 5.7A.996.996 0 105.7 7.11L10.59 12 5.7 16.89a.996.996 0 101.41 1.41L12 13.41l4.89 4.89a.996.996 0 101.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"/>
+          </svg>
+        </button>
+    
+        <h2>Sign in</h2>
+    
+        <form class="login-form">
+          <input type="text" placeholder="username" required>
+          <input type="password" placeholder="password" required>
+      
+          <button type="submit">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z" fill="white"/>
+            </svg>
+            Confirm
+          </button>
+      
+          <div class="account-text">
+            Don't have an account? <a href="#" id="switchToSignup">Sign up</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+<!-- Signup Modal  -->
+    <div class="modal-overlay" id="signupModal">
+      <div class="login-modal">
+        <button class="close-modal" id="closeSignupModal">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.3 5.71a.996.996 0 00-1.41 0L12 10.59 7.11 5.7A.996.996 0 105.7 7.11L10.59 12 5.7 16.89a.996.996 0 101.41 1.41L12 13.41l4.89 4.89a.996.996 0 101.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"/>
+          </svg>
+        </button>
+    
+        <h2>Sign up</h2>
+    
+        <form class="login-form">
+          <input type="text" placeholder="username" required>
+          <input type="email" placeholder="email" required>
+          <input type="password" placeholder="password" required>
+          <input type="password" placeholder="confirm password" required>
+      
+          <button type="submit">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z" fill="white"/>
+            </svg>
+            Create Account
+          </button>
+      
+          <div class="account-text">
+            Already have an account? <a href="#" id="switchToLogin">Sign in</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </body>
 </html>
