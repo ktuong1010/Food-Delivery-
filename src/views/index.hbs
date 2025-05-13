@@ -1,0 +1,26 @@
+{{> hero}}
+
+{{> exclusive-deals}}
+
+{{> categories}}
+
+{{> popular-restaurants}}
+
+{{> about-us}}
+
+<!-- Statistics -->
+<section class="statistics">
+  <div class="main-content">
+    <div class="stats-container">
+      {{#each stats}}
+        <div class="stat-item">
+          <h3>{{this.count}}</h3>
+          <p>{{this.label}}</p>
+        </div>
+        {{#unless @last}}
+          <div class="divider"></div>
+        {{/unless}}
+      {{/each}}
+    </div>
+  </div>
+</section>
