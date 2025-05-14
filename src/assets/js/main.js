@@ -302,4 +302,103 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize other components if needed
     console.log('Foodzie website initialized successfully!');
+
+    //Modal Login and Signup
+    const loginModal = document.getElementById('loginModal');
+    const signupModal = document.getElementById('signupModal');
+    const loginSignupBtn = document.querySelector('.login-signup');
+    const closeModalBtn = document.getElementById('closeModal');
+    const closeSignupModalBtn = document.getElementById('closeSignupModal');
+    const switchToSignupBtn = document.getElementById('switchToSignup');
+    const switchToLoginBtn = document.getElementById('switchToLogin');
+    
+    // Function to open login modal
+    function openLoginModal() {
+        loginModal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+    
+    // Function to close login modal
+    function closeLoginModal() {
+        loginModal.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+    
+    // Function to open signup modal
+    function openSignupModal() {
+        loginModal.classList.remove('active');
+        signupModal.classList.add('active');
+    }
+    
+    // Function to close signup modal
+    function closeSignupModal() {
+        signupModal.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+    
+    // Function to switch from signup to login
+    function switchToLogin() {
+        signupModal.classList.remove('active');
+        loginModal.classList.add('active');
+    }
+    
+    // Event listeners
+    if (loginSignupBtn) {
+        loginSignupBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            openLoginModal();
+        });
+    }
+    
+    if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', closeLoginModal);
+    }
+    
+    if (closeSignupModalBtn) {
+        closeSignupModalBtn.addEventListener('click', closeSignupModal);
+    }
+    
+    if (switchToSignupBtn) {
+        switchToSignupBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            openSignupModal();
+        });
+    }
+    
+    if (switchToLoginBtn) {
+        switchToLoginBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            switchToLogin();
+        });
+    }
+    
+    // Close modal when clicking outside of it
+    window.addEventListener('click', function(event) {
+        if (event.target === loginModal) {
+            closeLoginModal();
+        } else if (event.target === signupModal) {
+            closeSignupModal();
+        }
+    });
+    
+    // Handle form submissions (prevent default behavior)
+    const forms = document.querySelectorAll('.login-form');
+    forms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Show an alert
+            const isLogin = form.closest('#loginModal') !== null;
+            alert(isLogin ? 'Login submitted' : 'Signup submitted');
+            // Close the modal after submission
+            isLogin ? closeLoginModal() : closeSignupModal();
+        });
+    });
+    
+    // Close modals when pressing ESC key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeLoginModal();
+            closeSignupModal();
+        }
+    });
 });

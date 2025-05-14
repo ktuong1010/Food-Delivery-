@@ -1053,6 +1053,12 @@ a {
   fill: white;
 }
 
+body.modal-open {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
 /* Animation for modal entrance */
 @keyframes modalFadeIn {
   from {
