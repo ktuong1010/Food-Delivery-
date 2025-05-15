@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     alert(`Thank you! Searching for restaurants near ${postcodeValue}`);
                     // Here you would redirect or show results
                 } else {
-                    alert('Please enter a valid UK postcode');
+                    alert('Please enter a valid postcode :3');
                     searchInput.focus();
                 }
             } else {
